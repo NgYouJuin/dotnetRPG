@@ -7,6 +7,7 @@ using AutoMapper;
 using dotnetRPG.Data;
 using dotnetRPG.Services.CharacterService;
 using dotnetRPG.Services.CharacterSkillService;
+using dotnetRPG.Services.FightService;
 using dotnetRPG.Services.WeaponService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -55,6 +56,7 @@ namespace dotnetRPG
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IWeaponService, WeaponService>();
             services.AddScoped<ICharacterSkillService, CharacterSkillService>();
+            services.AddScoped<IFightService, FightService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

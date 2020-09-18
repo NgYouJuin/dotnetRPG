@@ -61,7 +61,7 @@ namespace dotnetRPG.Services.CharacterSkillService
             catch (Exception ex)
             {
                 response.Success = false;
-                response.Message = ex.Message;
+                response.Message = "Finished Editing: " + ex.Message;
             }
             return response;
         }
